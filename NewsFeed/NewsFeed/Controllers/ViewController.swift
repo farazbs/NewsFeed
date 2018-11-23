@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     // Tableview to display news feeds
     @IBOutlet weak var tableviewNewsFeed : UITableView!
     var newsFeed : NewsFeed!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -27,7 +27,11 @@ class ViewController: UIViewController {
         
         // Registered on newsapi and got following URL with apikey
         let apiURL = "https://newsapi.org/v2/everything?q=bitcoin&from=2018-10-23&sortBy=publishedAt&apiKey=" + Constant.apiKey
-        
+        loadNewsFeedApi(apiURL: apiURL)        
+    }
+    
+    
+    func loadNewsFeedApi(apiURL:String){
         // Alamofire method to consume newsfeed api
         Alamofire.request(apiURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseJSON{(response:DataResponse<Any>)in
             // Checking if getting data in response result
@@ -43,7 +47,6 @@ class ViewController: UIViewController {
             }
         }
     }
-    
 }
 extension ViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -59,7 +62,10 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellNewsFeed = tableviewNewsFeed.dequeueReusableCell(withIdentifier: "CellNewsFeed") as! CellNewsFeed
         let article = self.newsFeed.articles![indexPath.row]
-        cellNewsFeed.lblPublishedAt.text = article.publishedAt
+        // Validating and formatting published date then populate in the fields
+        if article.publishedAt != nil && article.publishedAt != ""{
+            cellNewsFeed.lblPublishedAt.text = Utility.formatDate(date: article.publishedAt!)
+        }
         cellNewsFeed.lblTitle.text = article.title
         cellNewsFeed.lblAuthor.text = article.author
         // SD image load data once only and it cache till the application life cycle
@@ -67,6 +73,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         return cellNewsFeed
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Calling Detail view and pass the selected article
         let feedsDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "FeedsDetailViewController") as! FeedsDetailViewController
         feedsDetailVC.article = self.newsFeed.articles![indexPath.row]
         self.navigationController?.pushViewController(feedsDetailVC, animated: true)
