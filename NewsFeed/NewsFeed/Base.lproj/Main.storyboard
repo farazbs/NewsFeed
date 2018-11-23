@@ -59,7 +59,7 @@
                                                         <constraint firstAttribute="height" constant="19" id="0wq-au-A30"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="14"/>
-                                                    <color key="textColor" red="0.27047362920000001" green="0.67652839419999999" blue="0.24033057690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.1333333333" green="0.59999999999999998" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="taz-du-f9t">
@@ -119,6 +119,128 @@
             </objects>
             <point key="canvasLocation" x="1140" y="790.25487256371821"/>
         </scene>
+        <!--Feeds Detail View Controller-->
+        <scene sceneID="gs9-ve-TkB">
+            <objects>
+                <viewController storyboardIdentifier="FeedsDetailViewController" id="NJ2-0T-mwN" customClass="FeedsDetailViewController" customModule="NewsFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1ln-f7-c5J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Feed Title " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbB-po-MsC">
+                                <rect key="frame" x="10" y="30" width="355" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="s0p-vd-o5N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23-11-2018 7:55PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrg-XJ-zue">
+                                <rect key="frame" x="38" y="73" width="327" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="Oes-4i-I0c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="11"/>
+                                <color key="textColor" red="0.35686274509999999" green="0.38823529410000002" blue="0.41960784309999999" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="j08-Fy-EXx">
+                                <rect key="frame" x="14" y="73" width="18" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="9Wg-kY-RLN"/>
+                                    <constraint firstAttribute="width" constant="18" id="tQm-bO-vKh"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mCK-0Z-6oc">
+                                <rect key="frame" x="10" y="93" width="355" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="mmz-LG-Rlb"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PXD-XP-tP7">
+                                <rect key="frame" x="10" y="203" width="355" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="8v6-wl-pTe"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_author" translatesAutoresizingMaskIntoConstraints="NO" id="iat-2K-UwR">
+                                <rect key="frame" x="14" y="357" width="18" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="18" id="bTo-w2-ZeZ"/>
+                                    <constraint firstAttribute="height" constant="15" id="zix-nc-Qw5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAraz Zafar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYx-5B-MNs">
+                                <rect key="frame" x="38" y="358" width="327" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="phY-f6-2zp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="12"/>
+                                <color key="textColor" red="0.13333333333333333" green="0.59999999999999998" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vQ4-YH-pKG">
+                                <rect key="frame" x="10" y="383" width="355" height="130"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="pT2-cA-Kwy"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RbB-po-MsC" firstAttribute="top" secondItem="NaK-cl-7vP" secondAttribute="top" constant="10" id="2x0-6y-pCH"/>
+                            <constraint firstItem="PXD-XP-tP7" firstAttribute="top" secondItem="mCK-0Z-6oc" secondAttribute="bottom" constant="10" id="Eyk-oS-MTu"/>
+                            <constraint firstItem="PXD-XP-tP7" firstAttribute="leading" secondItem="NaK-cl-7vP" secondAttribute="leading" constant="10" id="HuS-Ti-dld"/>
+                            <constraint firstItem="vQ4-YH-pKG" firstAttribute="top" secondItem="iat-2K-UwR" secondAttribute="bottom" constant="11" id="KvA-WU-TUg"/>
+                            <constraint firstItem="mCK-0Z-6oc" firstAttribute="top" secondItem="jrg-XJ-zue" secondAttribute="bottom" constant="5" id="O2J-BC-lTF"/>
+                            <constraint firstItem="jrg-XJ-zue" firstAttribute="leading" secondItem="j08-Fy-EXx" secondAttribute="trailing" constant="6" id="SDF-sh-M1d"/>
+                            <constraint firstItem="NaK-cl-7vP" firstAttribute="trailing" secondItem="RbB-po-MsC" secondAttribute="trailing" constant="10" id="TdG-N9-SZh"/>
+                            <constraint firstItem="NaK-cl-7vP" firstAttribute="trailing" secondItem="PXD-XP-tP7" secondAttribute="trailing" constant="10" id="UGP-As-fGa"/>
+                            <constraint firstItem="iat-2K-UwR" firstAttribute="top" secondItem="PXD-XP-tP7" secondAttribute="bottom" constant="14" id="UQX-mA-cj6"/>
+                            <constraint firstItem="NaK-cl-7vP" firstAttribute="trailing" secondItem="mCK-0Z-6oc" secondAttribute="trailing" constant="10" id="W6U-Un-cse"/>
+                            <constraint firstItem="NaK-cl-7vP" firstAttribute="trailing" secondItem="pYx-5B-MNs" secondAttribute="trailing" constant="10" id="Yw3-G4-pS7"/>
+                            <constraint firstItem="j08-Fy-EXx" firstAttribute="leading" secondItem="NaK-cl-7vP" secondAttribute="leading" constant="14" id="e29-zQ-eNP"/>
+                            <constraint firstItem="jrg-XJ-zue" firstAttribute="top" secondItem="RbB-po-MsC" secondAttribute="bottom" constant="1" id="evE-yc-HQg"/>
+                            <constraint firstItem="pYx-5B-MNs" firstAttribute="top" secondItem="PXD-XP-tP7" secondAttribute="bottom" constant="15" id="evM-TP-B5d"/>
+                            <constraint firstItem="NaK-cl-7vP" firstAttribute="trailing" secondItem="vQ4-YH-pKG" secondAttribute="trailing" constant="10" id="fi8-9f-DZM"/>
+                            <constraint firstItem="pYx-5B-MNs" firstAttribute="leading" secondItem="iat-2K-UwR" secondAttribute="trailing" constant="6" id="g4M-Af-2fP"/>
+                            <constraint firstItem="RbB-po-MsC" firstAttribute="leading" secondItem="NaK-cl-7vP" secondAttribute="leading" constant="10" id="i4c-cJ-v76"/>
+                            <constraint firstItem="mCK-0Z-6oc" firstAttribute="leading" secondItem="NaK-cl-7vP" secondAttribute="leading" constant="10" id="ksD-em-urD"/>
+                            <constraint firstItem="vQ4-YH-pKG" firstAttribute="leading" secondItem="NaK-cl-7vP" secondAttribute="leading" constant="10" id="lxN-Na-DWt"/>
+                            <constraint firstItem="j08-Fy-EXx" firstAttribute="top" secondItem="RbB-po-MsC" secondAttribute="bottom" constant="1" id="mvf-rv-rZu"/>
+                            <constraint firstItem="vQ4-YH-pKG" firstAttribute="top" secondItem="pYx-5B-MNs" secondAttribute="bottom" constant="10" id="o5o-0J-f8i"/>
+                            <constraint firstItem="NaK-cl-7vP" firstAttribute="trailing" secondItem="jrg-XJ-zue" secondAttribute="trailing" constant="10" id="wzd-2p-eXm"/>
+                            <constraint firstItem="iat-2K-UwR" firstAttribute="leading" secondItem="NaK-cl-7vP" secondAttribute="leading" constant="14" id="xhO-Ip-n9X"/>
+                            <constraint firstItem="mCK-0Z-6oc" firstAttribute="top" secondItem="j08-Fy-EXx" secondAttribute="bottom" constant="5" id="ziY-n2-gnV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NaK-cl-7vP"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgview" destination="PXD-XP-tP7" id="rgS-i6-AMx"/>
+                        <outlet property="lblAuthor" destination="pYx-5B-MNs" id="QfY-Am-9I3"/>
+                        <outlet property="lblPublishedAt" destination="jrg-XJ-zue" id="vcs-2X-mcs"/>
+                        <outlet property="lblTitle" destination="RbB-po-MsC" id="Qbg-1W-L75"/>
+                        <outlet property="textviewContent" destination="vQ4-YH-pKG" id="Fg7-L7-y27"/>
+                        <outlet property="textviewDesc" destination="mCK-0Z-6oc" id="JXk-Ts-GMa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qaf-Q7-SMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2008.8" y="787.55622188905556"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="oQr-UY-aTT">
             <objects>
@@ -138,4 +260,8 @@
             <point key="canvasLocation" x="133.59999999999999" y="791.15442278860576"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ico_author" width="68" height="68"/>
+        <image name="ico_calendar" width="68" height="68"/>
+    </resources>
 </document>

@@ -22,6 +22,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // Set Title of the screen
+        self.title = "News"
+        
         // Registered on newsapi and got following URL with apikey
         let apiURL = "https://newsapi.org/v2/everything?q=bitcoin&from=2018-10-23&sortBy=publishedAt&apiKey=" + Constant.apiKey
         
@@ -63,8 +66,10 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         cellNewsFeed.imgview.sd_setImage(with: URL(string: article.urlToImage!), placeholderImage: UIImage(named: "img_placeholder"), options: [], completed: nil)
         return cellNewsFeed
     }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let feedsDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "FeedsDetailViewController") as! FeedsDetailViewController
+        feedsDetailVC.article = self.newsFeed.articles![indexPath.row]
+        self.navigationController?.pushViewController(feedsDetailVC, animated: true)
+    }
 }
 
