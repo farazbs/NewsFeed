@@ -10,6 +10,7 @@ target 'NewsFeed' do
 pod 'Alamofire'
 pod 'AlamofireObjectMapper'
 pod 'SwiftyJSON'
+pod 'SDWebImage', '~> 4.0'
 
   target 'NewsFeedTests' do
     inherit! :search_paths
